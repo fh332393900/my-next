@@ -56,6 +56,7 @@ export const Navbar = () => {
     <NextUINavbar
       classNames={{
         item: ["flex", "relative", "h-full", "text-center", "items-center"],
+        base: 'bg-navBg backdrop-saturate-[none]'
       }}
       maxWidth="xl"
       position="sticky"
@@ -92,15 +93,15 @@ export const Navbar = () => {
       >
         <NavbarItem className="hidden sm:flex gap-2">
           <Link isExternal aria-label="Github" href={siteConfig.links.github}>
-            <GithubIcon className="text-default-500" />
+            <GithubIcon className="text-white" />
           </Link>
-          <ThemeSwitch />
+          {/* <ThemeSwitch /> */}
         </NavbarItem>
         <NavbarItem className="hidden md:flex">
           <Button
             isExternal
             as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
+            className="text-sm font-normal text-white bg-primary rounded-3xl"
             href={siteConfig.links.sponsor}
             startContent={<HeartFilledIcon className="text-danger" />}
             variant="flat"

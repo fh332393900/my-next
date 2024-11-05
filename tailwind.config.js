@@ -13,12 +13,16 @@ module.exports = {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
+      backdropSaturate: {
+        'none': 'none'
+      },
       backgroundImage: {
         'hero-pattern': "url('/assets/image/bg.jpg')",
       },
       colors: {
         white: "#FFFFFF",
         black: "#000000",
+        navBg: "rgba(0, 0, 0, 0.1)",
         blue: {
           50: "#e6f1fe",
           100: "#cce3fd",
