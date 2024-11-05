@@ -11,14 +11,13 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
+        <div className={title({ color: "violet" })}>Steven Feng&nbsp;</div>
         <br />
-        <span className={title()}>
-          websites regardless of your design experience.
-        </span>
+        <div className="text-[2.3rem] lg:text-5xl leading-9 tracking-tight font-semibold mt-4">
+          Freezing forever, thawing forever. 
+        </div>
         <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
+          （十年饮冰，难凉热血）
         </div>
       </div>
 
@@ -30,9 +29,9 @@ export default function Home() {
             radius: "full",
             variant: "shadow",
           })}
-          href={siteConfig.links.docs}
+          href={siteConfig.links.juejin}
         >
-          Documentation
+          掘金
         </Link>
         <Link
           isExternal
@@ -44,13 +43,13 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="mt-8">
+      {/* <div className="mt-8">
         <Snippet hideCopyButton hideSymbol variant="bordered">
           <span>
             Get started by editing <Code color="primary">app/page.tsx</Code>
           </span>
         </Snippet>
-      </div>
+      </div> */}
     </section>
   );
 }
