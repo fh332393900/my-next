@@ -11,19 +11,16 @@
 #    You can use ACK Pro cluster for more security and better performance.
 #    For instructions see https://www.alibabacloud.com/help/doc-detail/95108.htm
 #
-# 3. Store your AccessKey pair in GitHub Actions secrets named `ACCESS_KEY_ID` and `ACCESS_KEY_SECRET`.
-#    For instructions on setting up secrets see: https://developer.github.com/actions/managing-workflows/storing-secrets/
-#
-# 4. Change the values for the REGION_ID, REGISTRY, NAMESPACE, IMAGE, ACK_CLUSTER_ID, and ACK_DEPLOYMENT_NAME.
+# 3. Deploy docker image
 #
 
 name: Build and Deploy to ACK
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 # Environment variables available to all jobs and steps in this workflow.
 env:
@@ -45,13 +42,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     - run: npm install
-    - name: Make .env file
-      uses: SpicyPizza/create-envfile@v1.3
-      with:
-        envkey_DEBUG: false
-        envkey_VITE_KV_REST_API_URL: ${{ secrets.VITE_KV_REST_API_URL }}
-        envkey_VITE_KV_REST_API_TOKEN: ${{ secrets.VITE_KV_REST_API_TOKEN }}
-        file_name: .env
     - run: npm run build
 
     # Login to ACR
@@ -68,11 +58,8 @@ jobs:
       run: |
         docker build --tag "$REGISTRY/$NAMESPACE/$IMAGE:$TAG" .
         docker push "$REGISTRY/$NAMESPACE/$IMAGE:$TAG"
-    
+
     # Deploy docker image
-    # docker stop my-next
-    # docker rm my-next
-    # docker rmi registry.cn-chengdu.aliyuncs.com/stevenfeng-prod/my-next:latest
     - name: Deploy docker image
       uses: appleboy/ssh-action@master
       with:
