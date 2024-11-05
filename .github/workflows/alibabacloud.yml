@@ -67,5 +67,8 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         password: ${{ secrets.SSH_PASSWORD }}
         script: |
+          docker stop my-next
+          docker rm my-next
+          docker rmi registry.cn-chengdu.aliyuncs.com/stevenfeng-prod/my-next:latest
           docker pull registry.cn-chengdu.aliyuncs.com/stevenfeng-prod/my-next:latest
           docker run -p 8084:3000 -d --name my-next registry.cn-chengdu.aliyuncs.com/stevenfeng-prod/my-next:latest
