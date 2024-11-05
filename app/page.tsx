@@ -6,6 +6,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
+import { BackgroundInfo } from "@/components/background-info";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
           GitHub
         </Link>
       </div>
+      <BackgroundInfo></BackgroundInfo>
 
       {/* <div className="mt-8">
         <Snippet hideCopyButton hideSymbol variant="bordered">
