@@ -67,11 +67,11 @@ export default function BlogList() {
   }, []);
 
   return (
-    <div className="px-2 flex flex-wrap">
+    <div className="px-5 flex flex-wrap justify-between">
       {list.map((item, index) => (
         <AnimateItems
           key={index}
-          className="cursor-pointer mr-5 mb-5"
+          className="cursor-pointer mb-5"
           items={itemCard(item)}
         />
       ))}
