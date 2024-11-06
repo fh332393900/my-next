@@ -5,7 +5,7 @@ const blogList = [
     tag: ["Vue.js", "Nuxt.js", "前端"],
     view: 532,
     like: 6,
-    lint: "https://juejin.cn/post/7405777954515910682",
+    link: "https://juejin.cn/post/7405777954515910682",
   },
   {
     title: "基于vue3+threejs实现可视化大屏",
