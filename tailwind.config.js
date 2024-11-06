@@ -1,11 +1,11 @@
-import { nextui } from '@nextui-org/theme'
+import { nextui } from "@nextui-org/theme";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -14,10 +14,10 @@ module.exports = {
         mono: ["var(--font-mono)"],
       },
       backdropSaturate: {
-        'none': 'none'
+        none: "none",
       },
       backgroundImage: {
-        'hero-pattern': "url('/assets/image/bg.jpg')",
+        "hero-pattern": "url('/assets/image/bg.jpg')",
       },
       colors: {
         white: "#FFFFFF",
@@ -35,9 +35,10 @@ module.exports = {
           800: "#002e62",
           900: "#001731",
         },
-      }
+      },
     },
   },
   darkMode: "class",
+  darkMode: "class",
   plugins: [nextui()],
-}
+};

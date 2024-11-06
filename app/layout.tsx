@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   authors: {
-    url: '',
-    name: siteConfig.name
+    url: "",
+    name: siteConfig.name,
   },
   icons: {
     icon: "/favicon.svg",
@@ -48,7 +48,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+            <main className="container mx-auto max-w-7xl pt-8 px-6 flex-grow overflow-y-auto h-screen">
               {children}
             </main>
             <footer className="w-full flex items-center justify-center py-3 text-center">
@@ -59,7 +59,9 @@ export default function RootLayout({
                   href="https://stevenfeng.cn"
                   title="stevenfeng.cn homepage"
                 >
-                  <span className="text-default-600">Copyright © 2022 - 2024</span>
+                  <span className="text-default-600">
+                    Copyright © 2022 - 2024
+                  </span>
                   <p className="text-primary">Steven Feng</p>
                 </Link>
               </div>
