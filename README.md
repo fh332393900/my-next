@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://stevenfeng.cn" target="_blank" rel="noopener noreferrer">
-    <img width="160" height="160" src="./public/project.png" alt="homepage">
+    <img width="600" src="./public/project.png" alt="homepage">
   </a>
 </p>
 
