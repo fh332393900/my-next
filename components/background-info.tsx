@@ -4,7 +4,6 @@ import { Button } from "@nextui-org/button";
 import { Tooltip } from "@nextui-org/tooltip";
 
 export const BackgroundInfo = () => {
-
   return (
     <Tooltip
       content={
@@ -19,7 +18,7 @@ export const BackgroundInfo = () => {
         </div>
       }
     >
-      <Button radius="full" className="fixed bottom-8 right-8" >
+      <Button className="fixed bottom-8 right-8" radius="full">
         壁纸信息
       </Button>
     </Tooltip>

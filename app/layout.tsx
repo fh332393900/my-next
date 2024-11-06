@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  keywords: siteConfig.keywords,
   authors: {
     url: "",
     name: siteConfig.name,
@@ -51,18 +52,16 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl pt-8 px-6 flex-grow overflow-y-auto h-screen">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3 text-center">
+            <footer className="w-full flex items-center justify-center py-3 text-center text-sm">
               <div>
                 <Link
                   isExternal
-                  className="flex items-center gap-1 text-current"
+                  className="flex items-center gap-1 text-current text-sm"
                   href="https://stevenfeng.cn"
                   title="stevenfeng.cn homepage"
                 >
-                  <span className="text-default-600">
-                    Copyright © 2022 - 2024
-                  </span>
-                  <p className="text-primary">Steven Feng</p>
+                  <span className="text-white">Copyright © 2022 - 2024</span>
+                  <p className="text-gray-200 font-bold">Steven Feng</p>
                 </Link>
               </div>
             </footer>

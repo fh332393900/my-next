@@ -2,7 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Steven Feng",
-  description: "Make beautiful websites regardless of your design experience.",
+  description: "冯航的个人主页，steven feng的博客。",
+  keywords: "React, Next.js, Next UI, 前端技术分享, 博客",
   navItems: [
     {
       label: "首页",
