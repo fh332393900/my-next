@@ -64,7 +64,7 @@ export default function BlogList() {
 
   useEffect(() => {
     getBlogList();
-  });
+  }, []);
 
   return (
     <div className="px-2 flex flex-wrap">
