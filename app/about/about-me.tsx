@@ -89,7 +89,7 @@ export default function AboutMe() {
                   className="w-10 mx-auto flex items-center flex-col justify-center"
                   title={item.title}
                 >
-                  <Image src={item.icon} width={32} />
+                  <Image src={item.icon} width={32} style={item.style} />
                   <p className="text-xs text-gray-200 font-bold mt-3 opacity-80">
                     {item.title}
                   </p>

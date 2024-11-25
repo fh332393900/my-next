@@ -10,7 +10,7 @@ interface Props {
 
 export const AnimateItems = ({ className, items, scale = 1.1 }: Props) => {
   return (
-    <motion.div className={className} whileHover={{ scale: scale }}>
+    <motion.div className={className} whileHover={{ scale: scale, top: "30px" }}>
       {items}
     </motion.div>
   );
